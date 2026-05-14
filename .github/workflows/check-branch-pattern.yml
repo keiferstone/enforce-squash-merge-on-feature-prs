@@ -17,3 +17,10 @@ jobs:
             exit 1
           fi
           echo "Branch '${{ github.head_ref }}' is allowed."
+
+  always-pass:
+    name: Always Pass
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pass
+        run: echo "Check passed."
