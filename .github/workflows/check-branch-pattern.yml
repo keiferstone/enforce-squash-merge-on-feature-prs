@@ -13,7 +13,7 @@ jobs:
       - name: Check source branch
         run: |
           if [[ "${{ github.head_ref }}" == release/* ]]; then
-            echo "::error::Release branches (release/*) cannot be merged into development. Target main instead."
+            echo "::error::Release branches (release/*) cannot be merged directly into main. Use a non-release branch."
             exit 1
           fi
           echo "Branch '${{ github.head_ref }}' is allowed."
